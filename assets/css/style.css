@@ -1,0 +1,64 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-image: url(../img/sky.jpg);
+  background-size: auto;
+}
+
+.game {
+  height: calc(100vh - 300px);
+  margin-top: 300px;
+  background-image: url(../img/grass.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+.game__inner {
+  position: relative;
+  width: 700px;
+  margin: auto;
+}
+
+.cat, .donut {
+  position: absolute;
+}
+
+.cat {
+  content: url(../img/car-run.png);
+  left: 150px;
+  height: 100px;
+  top: -100px;
+}
+
+.cat_jump {
+  content: url(../img/cat-jump.png);
+  animation: jump 0.4s linear;
+}
+
+.donut {
+  content: url(../img/donut.png);
+  animation: move 1.2s infinite linear;
+  height: 70px;
+  top: -70px;
+}
+
+@keyframes move {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: calc(100% - 70px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: -100px
+  }
+  50% {
+    top: -220px
+  }
+  100% {
+    top: -100px
+  }
+}
